@@ -8,12 +8,12 @@ pipeline {
         }
         stage('Build Docker Image') {
             steps {
-                sh 'docker build -t my-app .'
+                sh 'sudo docker build -t my-app .'
             }
         }
         stage('Deploy to Docker') {
             steps {
-                sh 'docker run -p 8081:8080 -d my-app tomcat:latest'
+                sh 'sudo docker run -p 8081:8080 -d my-app tomcat:latest'
             }
         }
     }
