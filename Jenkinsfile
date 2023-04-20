@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Deploy to Docker') {
             steps {
-                sh 'docker run -p 8081:8080 -d my-app tomcat:latest'
+                sh 'docker run -p 8081:8080 -d my-app'
             }
         }
     }
