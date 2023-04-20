@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Deploy to Docker') {
             steps {
-                sh 'docker run -p 8081:8080 -itd my-app'
+                sh 'docker run -p 80:8080 -itd my-app'
             }
         }
     }
